@@ -2,6 +2,8 @@ package com.scoutIT.test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.scoutIT.pages.LandingPage;
+import com.scoutIT.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -17,6 +19,8 @@ import java.lang.reflect.Method;
 
 
 public class BaseTest {
+
+    protected LandingPage landingPage=null;
     protected WebDriver driver;
     static ExtentReports extent;
 
@@ -37,6 +41,9 @@ public class BaseTest {
     public void initTest(Method method){
 
         driver = TestDriverManager.getDriver();
+
+        LoginPage loginPage=new LoginPage(driver);
+        landingPage = loginPage.login("Automation@mailinator.com", "Test@123");
     }
 
     @AfterMethod

@@ -10,6 +10,7 @@ public class TestConfigReader {
     }
     public static String read(String key,String defaultVal) {
 
-        return rb.containsKey(key)?rb.getString(key):defaultVal;
+        return rb.containsKey(key)?
+                rb.getString(key):defaultVal;
     }
 }

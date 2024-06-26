@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-    private final WebDriver driver;
+    final WebDriver driver;
 
     @FindBy(xpath= "//input[@id='UserName']")
     WebElement txtUserName;
