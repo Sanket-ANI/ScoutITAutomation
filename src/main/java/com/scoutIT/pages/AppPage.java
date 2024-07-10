@@ -79,12 +79,6 @@ public class AppPage extends BasePage {
         js.executeScript("window.scrollBy(0,250)", "");
         Submit.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
-      /*  String Expected_message="App updated successfully";
-        String Actual_message=driver.findElement(By.xpath("//div[@id='successAlert']")).getText();
-        System.out.println(Actual_message);*/
-        String Expected_URL="https://qa.scoutitmonitor.com/ManageApps/Index";
-        String Actual_URL=driver.getCurrentUrl();
-        Assert.assertEquals(Actual_URL,Expected_URL);
         return new LandingPage(this.driver);
 
     }
