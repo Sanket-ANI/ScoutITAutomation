@@ -11,6 +11,6 @@ public class AppTest extends BaseTest{
     public void AddCustomApp()
     {
         AppPage appPage=new AppPage(super.driver);
-        LandingPage landingPage=appPage.App("https://app.ssemble.com","Vloger","Automation test","email","password","css-x17fer","nishant@ssemble.com","Think@105");
+        LandingPage landingPage=appPage.App("https://app.ssemble.com","Vloger987","Automation test","email","password","css-x17fer","nishant@ssemble.com","Think@105");
     }
 }
