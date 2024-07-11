@@ -62,7 +62,7 @@ public class AppPage extends BasePage {
         super(driver);
     }
 
-    public LandingPage App(String appurl,String appname, String description,String value1,String value2,String value3,String param1,String param2) {
+    public LandingPage App(String appurl,String appname, String description,String value1,String value2,String value3,String param1,String param2) throws InterruptedException {
         ManageIT.click();
         ManageApps.click();
         AddButton.click();
@@ -78,7 +78,7 @@ public class AppPage extends BasePage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,250)", "");
         Submit.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
+        Thread.sleep(5000);
         return new LandingPage(this.driver);
 
     }

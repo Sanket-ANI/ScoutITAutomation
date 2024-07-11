@@ -10,6 +10,6 @@ public class LandingPage extends BasePage {
     public LandingPage(WebDriver driver) {
         super(driver);
 
-        // Assert.assertEquals(driver.findElements(By.xpath("//div[contains(@class,'MuiDrawer-paper')]")).size(),1,"Not on Landing Page");
+
     }
 }

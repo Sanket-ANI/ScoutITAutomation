@@ -2,6 +2,7 @@ package com.scoutIT.test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.github.javafaker.Faker;
 import com.scoutIT.pages.LandingPage;
 import com.scoutIT.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
@@ -23,6 +24,7 @@ public class BaseTest {
     protected LandingPage landingPage=null;
     protected WebDriver driver;
     static ExtentReports extent;
+    Faker faker = new Faker();
 
     @BeforeSuite
     public void initReporting(){
